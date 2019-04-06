@@ -1,0 +1,20 @@
+body{
+    background-image: url("../images/images.jpg")
+}
+#title {
+    background-color: lightskyblue;
+    width: 40%;
+    text-align:justify;
+}
+
+.intro {
+    background-color: peachpuff;
+    color: green;
+    width: 50%; 
+}
+
+.score {
+    background-color: lightblue;
+    color: darkblue;
+
+}
