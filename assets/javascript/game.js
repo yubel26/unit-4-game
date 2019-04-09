@@ -2,6 +2,10 @@ $(document).ready(function() {
     console.log("im ready");
     var random = Math.floor(Math.random() * 101 + 19);
     console.log(random)
+   
+
+
+
 
     $(".randomNumber").text(random);
 
@@ -29,13 +33,17 @@ $(document).ready(function() {
          purple = Math.floor(Math.random() * 11 + 1);
          green = Math.floor(Math.random() * 11 + 1);
          blue = Math.floor(Math.random() * 11 + 1);
-        totalScore = 0;
+        // totalScore = 0;
+        userTotal = 0;
         $('#totalScore').text(userTotal);
+        $('.randomNumber').text(random);
+
     }
     function yay() {
         alert("You won!");
         Wins++;
         $('#numberWins').text(Wins);
+        return reset();
        
     }
    
@@ -44,6 +52,7 @@ $(document).ready(function() {
         alert("You lose!");
         Losses++;
         $('#numberLosses').text(Losses);
+        return reset();
         
         
     }
@@ -52,6 +61,7 @@ $(document).ready(function() {
         userTotal = userTotal + red;
         console.log("New userTotal= " + userTotal);
         $('#totalScore').text(userTotal); 
+        console.log(userTotal);
         if (userTotal == random){
             yay();
             // reset();
@@ -107,7 +117,7 @@ $(document).ready(function() {
           }  
            
     }) 
-    if (userTotal >= random){
-             reset()
-            } 
+    // if (userTotal >= random){
+    //          reset()
+    //         } 
 })
